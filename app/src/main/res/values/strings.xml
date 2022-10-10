@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Art Space 2</string>
+    <string name="magical_time">Magical Time</string>
+    <string name="nature">Nature</string>
+    <string name="twilight">Twilight</string>
+    <string name="peace">Peace</string>
+    <string name="majestic">Majestic</string>
+    <string name="trees">Trees</string>
+    <string name="infinite_green">Infinite Green</string>
+    <string name="green_garden">Green Garden</string>
+    <string name="sunset">Sunset</string>
+    <string name="previous_icon">Previous Icon</string>
+    <string name="next_icon">Next Icon</string>
+    <string name="just_beautiful">Just Beautiful</string>
+    <string name="beautiful_ending">Beautiful Ending</string>
+    <string name="field">Field</string>
+    <string name="more_options">More options</string>
+
+</resources>
