@@ -14,14 +14,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -135,7 +133,7 @@ fun ArtSpaceScreen(
     albumTitleResourceId: String,
     onNextImageClick: () -> Unit,
     onPreviousImageClick: () -> Unit,
-   // onMoreOptionsClick: () -> Unit,
+    // onMoreOptionsClick: () -> Unit,
     contentDescriptionResourceId: String
 
 ) {
@@ -148,64 +146,65 @@ fun ArtSpaceScreen(
             .background(Color(0xFFf7f7f7))
     ) {
         //for more options
-        Box(
+        /*  Box(
+              modifier = Modifier
+                  .fillMaxSize()
+                  .weight(3f)
+          ) {
+              Image(
+                  painter = painterResource(R.drawable.more_icon),
+                  contentDescription = stringResource(R.string.more_options),
+                  modifier = Modifier.padding(top = 30.dp, start = 10.dp),
+                     /* .clickable (
+                          onClick = onMoreOptionsClick
+                              ),*/
+                  alignment = Alignment.Center
+
+              )*/
+        // for text
+        Card(
             modifier = Modifier
                 .fillMaxSize()
-                .weight(3f)
-        ) {
-            Image(
-                painter = painterResource(R.drawable.more_icon),
-                contentDescription = stringResource(R.string.more_options),
-                modifier = Modifier.padding(top = 30.dp, start = 10.dp),
-                   /* .clickable (
-                        onClick = onMoreOptionsClick
-                            ),*/
-                alignment = Alignment.Center
-
-            )
-            // for text
-            Card(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(24.dp),
-               elevation = 10.dp,
+                .padding(24.dp)
+                .weight(3f),
+            elevation = 10.dp,
 
 
             ) {
 
-                Column (
-                    modifier = Modifier.fillMaxSize(),
-                    verticalArrangement = Arrangement.Center,
-                    horizontalAlignment = Alignment.CenterHorizontally
-                        ){
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
 
-                    Text(
-                        text = titleResourceId,
-                        fontSize = 36.sp,
-                        fontWeight = FontWeight.Bold,
-
-                    )
-                    Text(
-                        text = "Darshana Das K",
-                        fontSize = 20.sp,
-                        fontFamily = fontFamily,
-                        fontWeight = FontWeight.Light,
-                        fontStyle = FontStyle.Italic,
+                Text(
+                    text = titleResourceId,
+                    fontSize = 36.sp,
+                    fontWeight = FontWeight.Bold,
 
                     )
-                    Text(
-                        text = "Album Title: $albumTitleResourceId",
-                        fontSize = 20.sp,
-                        fontFamily = fontFamily,
-                        fontWeight = FontWeight.Light,
-                        fontStyle = FontStyle.Italic,
+                Text(
+                    text = "Darshana Das K",
+                    fontSize = 20.sp,
+                    fontFamily = fontFamily,
+                    fontWeight = FontWeight.Light,
+                    fontStyle = FontStyle.Italic,
 
                     )
-                }
+                Text(
+                    text = "Album Title: $albumTitleResourceId",
+                    fontSize = 20.sp,
+                    fontFamily = fontFamily,
+                    fontWeight = FontWeight.Light,
+                    fontStyle = FontStyle.Italic,
 
-
+                    )
             }
+
+
         }
+        //  }
         // for image
         Column(
             modifier = Modifier
